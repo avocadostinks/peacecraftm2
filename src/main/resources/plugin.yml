@@ -1,0 +1,4 @@
+name: Peacecraftm2
+version: '${version}'
+main: peacecraftmmmm.peacecraftm2.Peacecraftm2
+api-version: 1.19
