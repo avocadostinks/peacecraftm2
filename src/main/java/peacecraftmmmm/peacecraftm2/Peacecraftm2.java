@@ -25,9 +25,16 @@ public final class Peacecraftm2 extends JavaPlugin implements Listener {
         if (event.getPlayer().toString() == "Itsbobthebuilder") {
             getServer().getOnlinePlayers().forEach(player -> player.sendMessage(event.getPlayer().getName() + " our god, has joined the game."));
             // i will make this up here ^ colored with ansi escape codes soon
+            Scoreboard scoreboard = bukkit.getScoreboardManager().getNewScoreboard();
+            Objective objective = scoreboard.registerNewObjective("new","dummy",5);
+            objective.setDisplaySlot(DisplaySlot.SIDEBAR);
+            for (Player player : bukkit.getOnlinePlayers()) {
+                player.setScoreBoard(scoreboard);
+                Score score = objective.getScore(player.getName());
+                score.setScore(1);
+            }
         } else {
             getServer().getOnlinePlayers().forEach(player -> player.sendMessage(event.getPlayer().getName() + " has joined the game."));
         }
     }
-
 }
