@@ -24,6 +24,7 @@ public final class Peacecraftm2 extends JavaPlugin implements Listener {
 
         if (event.getPlayer().toString() == "Itsbobthebuilder") {
             getServer().getOnlinePlayers().forEach(player -> player.sendMessage(event.getPlayer().getName() + " our god, has joined the game."));
+            // i will make this up here ^ colored with ansi escape codes soon
         } else {
             getServer().getOnlinePlayers().forEach(player -> player.sendMessage(event.getPlayer().getName() + " has joined the game."));
         }
